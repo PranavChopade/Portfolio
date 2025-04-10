@@ -48,7 +48,7 @@ const Navbar = () => {
         ${scroll ? "bg-[#0d1825]/90 shadow-lg backdrop-blur-lg" : "bg-[#0d1825]"}`}>
 
         <div>
-          <img src={logo} className='w-16 rounded-xl cursor-pointer hover:shadow-lg transition duration-300' alt="logo" />
+          <img onClick={() => handleSmoothScroll('home')} src={logo} className='w-16 rounded-xl cursor-pointer hover:shadow-lg transition duration-300' alt="logo" />
         </div>
 
         <ul className='hidden md:flex gap-5 text-xl'>
