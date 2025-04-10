@@ -36,6 +36,9 @@ const Footer = () => {
               <Link to="#" onClick={() => handleSmoothScroll("home")} className='text-center'>Home</Link>
             </li>
             <li>
+              <Link to="#" onClick={() => handleSmoothScroll("projects")} className='text-center'>Projects</Link>
+            </li>
+            <li>
               <Link
                 to="#" onClick={() => handleSmoothScroll("about")} className='text-center' >About</Link>
             </li>
