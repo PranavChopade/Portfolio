@@ -38,8 +38,11 @@ const Contact = () => {
 
   }
   return (
-    <section id='contact' className='min-h-screen bg-[#0d1825] flex flex-col justify-center items-center text-white'>
-      <h1 className='text-center text-3xl md:text-5xl font-extrabold text-blue-500 mb-10'>Join Us</h1>
+    <section id='contact'
+      className='bg-[#0d1825] scroll-mt-15 flex flex-col justify-start items-center
+       text-white'>
+
+      <h1 className='text-center text-3xl md:text-5xl font-extrabold text-blue-500 mb-5'>Join Us</h1>
 
       <form onSubmit={handleFormSubmit} className='flex flex-col gap-6 w-[260px] md:w-[500px] bg-[#0f1b28] p-8 rounded-2xl border border-cyan-500 shadow-md shadow-cyan-500/20'>
 
