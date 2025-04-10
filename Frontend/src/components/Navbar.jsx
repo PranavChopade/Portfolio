@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <header>
       <nav className={`w-full fixed top-0 left-0 z-50 flex justify-between 
-        items-center p-2 px-8 md:px-14 text-white
+        items-center p-2 md:px-14 text-white
         ${scroll ? "bg-[#0d1825]/90 shadow-lg backdrop-blur-lg" : "bg-[#0d1825]"}`}>
 
         <div>
@@ -71,7 +71,7 @@ const Navbar = () => {
         </div>
 
         {toggle && (
-          <ul className='fixed top-16 left-0 w-full flex flex-col items-center justify-around space-y-4 bg-gradient-to-b from-cyan-200/50 to-black/80 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg z-50 text-white py-5 px-4 transition-all duration-300 hover:scale-105'>
+          <ul className='fixed top-16 left-0 w-full flex flex-col items-center justify-around space-y-4 bg-gradient-to-b from-cyan-200/50 to-black/80 backdrop-blur-lg border border-white/20 rounded-xl  shadow-lg z-50 text-white py-5 px-4 transition-all duration-300  '>
             <li onClick={() => handleSmoothScroll('home')}>
               <Link to="#" className='cursor-pointer text-lg hover:text-blue-400 transition duration-200'>Home</Link>
             </li>

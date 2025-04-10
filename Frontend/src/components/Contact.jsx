@@ -44,7 +44,7 @@ const Contact = () => {
 
       <h1 className='text-center text-3xl md:text-5xl font-extrabold text-blue-500 mb-5'>Join Us</h1>
 
-      <form onSubmit={handleFormSubmit} className='flex flex-col gap-6 w-[260px] md:w-[500px] bg-[#0f1b28] p-8 rounded-2xl border border-cyan-500 shadow-md shadow-cyan-500/20'>
+      <form onSubmit={handleFormSubmit} className='flex flex-col gap-6 w-[290px] md:w-[500px] bg-[#0f1b28] p-8 rounded-2xl border border-cyan-500 shadow-md shadow-cyan-500/20'>
 
         <input
           type="text"
