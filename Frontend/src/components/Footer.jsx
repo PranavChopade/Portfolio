@@ -59,9 +59,13 @@ const Footer = () => {
               <AiOutlineGithub size={36} className='hover:text-gray-400 cursor-pointer hover:scale-110 transition transform' />
             </Link>
 
-            <Link to={"pranavchopade129@gmail.com"} target='_blank'>
-              <AiOutlineMail size={36} className='hover:text-red-300 cursor-pointer hover:scale-110 transition transform' />
-            </Link>
+            <a href="mailto:pranavchopade129@gmail.com" target="_blank" rel="noopener noreferrer">
+              <AiOutlineMail
+                size={36}
+                className='hover:text-red-300 cursor-pointer hover:scale-110 transition transform'
+              />
+            </a>
+
 
           </div>
         </div>
