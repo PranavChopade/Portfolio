@@ -2,20 +2,20 @@ import React from 'react'
 import blog from '../assets/blog.png'
 import eventManagement from '../assets/eventmanagement.png'
 import stopWatch from '../assets/stopWatch.png'
-import tailwindImg from '../assets/tailwindImg.png'
+import responsive from '../assets/responsive.jpg'
 import calender from '../assets/calender.png'
-import calculator1 from '../assets/calculator1.png'
-import notes from '../assets/notes.png'
+import Todo from '../assets/Todo.png'
+import notes from '../assets/notes.jpg'
 const ProjectCard = () => {
 
   const Projects = [
-    { img: blog, name: "blog", githubLink: "https://Github.com/PranavChopade" },
-    { img: eventManagement, name: "eventManagement", githubLink: "https://Github.com/PranavChopade" },
-    { img: stopWatch, name: "stopWatch", githubLink: "https://Github.com/PranavChopade" },
-    { img: tailwindImg, name: "tailwindImg", githubLink: "https://Github.com/PranavChopade" },
+    { img: notes, name: "Redux-Notes-App", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Redux-Notes-App" },
+    { img: blog, name: "blog", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/blog" },
+    { img: eventManagement, name: "eventManagement", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/event-management-app" },
+    { img: responsive, name: "responsive", githubLink: "https://Github.com/https://github.com/PranavChopade/Tailwind-Responsiveness" },
+    { img: stopWatch, name: "stopWatch", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Stopwatch" },
     { img: calender, name: "calender", githubLink: "https://Github.com/PranavChopade" },
-    { img: calculator1, name: "calculator1", githubLink: "https://Github.com/PranavChopade" },
-    { img: notes, name: "Redux-Notes-App", githubLink: "https://Github.com/PranavChopade" }
+    { img: Todo, name: "Todo", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Todo" },
   ]
   return (
     <div className='grid place-content-center place-items-center md:grid-cols-3 lg:grid-cols-4'>
@@ -24,7 +24,7 @@ const ProjectCard = () => {
           <img key={index} src={data.img} alt="Project image" />
           <div className='p-2 break-words'>
             <h1 className='capitalize '>{data.name}</h1>
-            <a href={data.githubLink} className=' text-blue-400'>{data.githubLink} {"—>"}</a>
+            <a href={data.githubLink} className=' text-blue-400'>View Project {"->"}</a>
           </div>
         </div>
       ))}
