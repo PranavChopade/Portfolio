@@ -7,6 +7,7 @@ import calender from '../assets/calender.png'
 import Todo from '../assets/Todo.jpg'
 import notes from '../assets/notes.jpg'
 import expense from '../assets/expense.png'
+import UserAuthentication from '../assets/User-Authentication.jpg'
 
 
 const ProjectCard = () => {
@@ -17,6 +18,7 @@ const ProjectCard = () => {
     { img: blog, name: "blog", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/blog" },
     { img: eventManagement, name: "event Management", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/event-management-app" },
     { img: responsive, name: "responsive Web", githubLink: "https://github.com/PranavChopade/Tailwind-Responsiveness" },
+    { img: UserAuthentication, name: "User-Authentication", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/UserAuthentication" },
     { img: stopWatch, name: "stopWatch", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Stopwatch" },
     { img: calender, name: "calender", githubLink: "https://Github.com/PranavChopade" },
   ]
