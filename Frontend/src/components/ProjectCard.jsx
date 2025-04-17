@@ -6,16 +6,19 @@ import responsive from '../assets/responsive.jpg'
 import calender from '../assets/calender.png'
 import Todo from '../assets/Todo.jpg'
 import notes from '../assets/notes.jpg'
+import expense from '../assets/expense.png'
+
 
 const ProjectCard = () => {
   const Projects = [
     { img: notes, name: "Redux-Notes-App", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Redux-Notes-App" },
+    { img: Todo, name: "Todo", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Todo" },
+    { img: expense, name: "Expense-Tracker", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Expense-Tracker" },
     { img: blog, name: "blog", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/blog" },
-    { img: eventManagement, name: "eventManagement", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/event-management-app" },
-    { img: responsive, name: "responsive", githubLink: "https://github.com/PranavChopade/Tailwind-Responsiveness" },
+    { img: eventManagement, name: "event Management", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/event-management-app" },
+    { img: responsive, name: "responsive Web", githubLink: "https://github.com/PranavChopade/Tailwind-Responsiveness" },
     { img: stopWatch, name: "stopWatch", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Stopwatch" },
     { img: calender, name: "calender", githubLink: "https://Github.com/PranavChopade" },
-    { img: Todo, name: "Todo", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Todo" },
   ]
 
   return (
