@@ -1,79 +1,108 @@
-import React, { useState } from 'react'
-import axios from 'axios'
-import { toast } from 'react-toastify'
+import React, { useState } from 'react';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import Separator from "./Separator"
 const Contact = () => {
-
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleFormSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!name || !email || !message) {
-      toast.error("All fields are required!");
+      toast.error('All fields are required!');
       return;
     }
 
-
-    const userId = "67d95bf25bd7a8a283986dd8"
     const userMessage = {
-      name: name,
-      email: email,
-      message: message
-    }
+      name,
+      email,
+      message,
+    };
+
+    setLoading(true);
+
     try {
-      const response = await axios.post(`/api/users`, userMessage)
+      const response = await axios.post('/api/users', userMessage);
       console.log(response.data);
-      toast.success("Message Received")
-
+      toast.success('🎉 Message sent successfully!');
     } catch (error) {
-      console.error('Error registering user:', error.response?.data || error.message);
-      toast.error("Failed to send message. Try again later.");
-
+      console.error('Error sending message:', error.response?.data || error.message);
+      toast.error('❌ Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
+      setName('');
+      setEmail('');
+      setMessage('');
     }
+  };
 
-    setName("")
-    setEmail("")
-    setMessage("")
-
-  }
   return (
-    <section id='contact'
-      className='bg-[#0d1825] scroll-mt-15 flex flex-col justify-start items-center
-       text-white'>
+    <>
+      <section
+        id="contact"
+        className="bg-[#0d1825] relative flex flex-col items-center justify-center px-5 py-16 text-white"
+      >
+        {/* Decorative Background Glows */}
+        <div className="absolute w-80 h-80 bg-cyan-500/20 blur-3xl rounded-full top-0 left-[1%] animate-pulse pointer-events-none"></div>
 
-      <h1 className='text-center text-3xl md:text-5xl font-extrabold text-blue-500 mb-5'>Join Us</h1>
+        <div className="absolute w-80 h-80 bg-purple-600/20 blur-3xl rounded-full bottom-[-10%] right-[2%] animate-pulse pointer-events-none"></div>
 
-      <form onSubmit={handleFormSubmit} className='flex flex-col gap-6 w-[290px] md:w-[500px] bg-[#0f1b28] p-8 rounded-2xl border border-cyan-500 shadow-md shadow-cyan-500/20'>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-cyan-400 mb-7 text-center tracking-wider">
+          Message Me
+        </h1>
 
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder='Enter Your Name..'
-          className='w-full p-3 border-b-2 border-cyan-400 focus:outline-none focus:border-blue-400  placeholder-gray-400' />
+        <form
+          onSubmit={handleFormSubmit}
+          className="flex flex-col gap-6 w-full max-w-[500px] bg-[#0f1b28] p-8 rounded-2xl border border-cyan-500 shadow-lg shadow-cyan-500/30 mb-2"
+        >
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="👤 Your Name"
+            className="w-full p-3 text-white bg-transparent border-b-2 border-cyan-400 placeholder-gray-400
+          focus:outline-none focus:border-blue-400 transition-colors duration-300"
+            autoComplete="off"
+          />
 
-        <input type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder='Enter your email'
-          className='w-full p-3 bg-transparent border-b-2 border-cyan-400 focus:outline-none focus:border-blue-500 placeholder-gray-400' />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="📧 Your Email"
+            className="w-full p-3 text-white bg-transparent border-b-2 border-cyan-400 placeholder-gray-400
+          focus:outline-none focus:border-blue-400 transition-colors duration-300"
+            autoComplete="off"
+          />
 
-        <textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder='Enter your message'
-          className='w-full p-3 bg-transparent border-b-2 border-cyan-400 focus:outline-none focus:border-blue-500 placeholder-gray-400'>
-        </textarea>
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="✍️ Your Message"
+            rows={2}
+            className="w-full p-3 text-white bg-transparent border-b-2 border-cyan-400 placeholder-gray-400
+          focus:outline-none focus:border-blue-400 transition-colors duration-300 resize-none"
+          ></textarea>
 
-        <button
-          type='submit'
-          className='mt-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600  hover:scale-105 rounded-lg text-white font-medium  transition-all duration-300 tracking-wider '>
-          🚀 Send Message
-        </button>
-      </form>
-    </section>
-  )
-}
+          <button
+            type="submit"
+            disabled={loading}
+            className={`mt-4 py-3 rounded-lg font-semibold tracking-wide text-white transition-transform duration-300
+          ${loading
+                ? 'bg-cyan-700 cursor-not-allowed opacity-70'
+                : 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105'
+              }`}
+          >
+            {loading ? 'Sending...' : '🚀 Send Message'}
+          </button>
+        </form>
+        <Separator />
+      </section>
+    </>
+  );
 
-export default Contact
+};
+
+export default Contact;

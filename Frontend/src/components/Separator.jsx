@@ -1,10 +1,11 @@
-import React from 'react'
 
 const Separator = () => {
   return (
-    <div className='bg-[#0d1825] p-3.5 flex justify-center'>
-      <div className='h-0.5  font-thin w-[95%] bg-blue-400 hover:shadow-lg rounded-full'>
-      </div>
+    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center" >
+      <span className="animate-bounce text-cyan-400 text-3xl mb-1">
+        ↓
+      </span>
+      <div className="w-36 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 opacity-70 animate-fade-in" />
     </div>
   )
 }

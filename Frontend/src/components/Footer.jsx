@@ -25,7 +25,7 @@ const Footer = () => {
           <h1 className='text-4xl text-orange-500 font-semibold  
         '> PC</h1>
           <p className='mt-2 text-gray-400'>
-            Join the best Tech Solutions, we Innovate , inspire and delivers the best in industry.
+            Designed & built by Pranav Chopade with ❤️ using React.
           </p>
         </div>
 
@@ -38,10 +38,7 @@ const Footer = () => {
             <li>
               <Link to="#" onClick={() => handleSmoothScroll("projects")} className='text-center'>Projects</Link>
             </li>
-            <li>
-              <Link
-                to="#" onClick={() => handleSmoothScroll("about")} className='text-center' >About</Link>
-            </li>
+
             <li>
               <Link to="#" onClick={() => handleSmoothScroll("contact")} className='text-center'  >Contact</Link>
             </li>

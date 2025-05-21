@@ -1,34 +1,59 @@
-import React from 'react';
+import Separator from "./Separator";
+import profile3 from "../../public/profile3.png"
 
 const Hero = () => {
   return (
-    <section id='home'
-      className='relative w-full py-24 bg-[#0d1825] flex flex-col justify-center items-center text-white px-5 md:px-20'>
+    <section
+      id="home"
+      className="relative w-full min-h-screen flex flex-col md:flex-row items-center justify-between bg-[#0d1825] px-6 md:px-24 py-20 text-white"
+    >
+      <div className="absolute w-80 h-80 bg-cyan-500/20 blur-3xl rounded-full top-0 left-[1%] animate-pulse pointer-events-none"></div>
+      <div className="absolute w-80 h-80 bg-purple-600/20 blur-3xl rounded-full bottom-[-10%] right-[2%] animate-pulse pointer-events-none"></div>
 
-      <h1 className='text-4xl sm:text-5xl md:text-7xl font-extrabold mb-7 leading-snug text-center'>
-        Hey, I'm <br />
-        <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-400 animate-pulse'>
-          Pranav Chopade
-        </span>
-      </h1>
 
-      <p className='text-md sm:text-lg md:text-xl text-gray-400 mb-8 sm:mb-10 text-center'>
-        A <span className='text-blue-400 font-medium'>React Developer | UI Enthusiast</span> 🚀
-      </p>
+      <div className="md:w-1/2 flex flex-col justify-center space-y-6">
+        <h2 className="text-lg text-cyan-400 tracking-widest uppercase font-semibold">
+          Welcome to my portfolio
+        </h2>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 ">
-        <a href="#projects" className="px-8 py-3 text-md sm:text-lg bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-400/50">
-          🚀 Explore Projects
-        </a>
-        <a href="./Pranav_Chopade.pdf" target="_blank" className="px-8 py-3 text-md sm:text-lg border border-cyan-400 rounded-xl hover:bg-cyan-400/20 hover:scale-105 transition-all duration-300">
-          📄 View Resume
-        </a>
+        <h1 className="text-4xl font-extrabold text-white leading-tight">
+          Hi, I'm <span className="text-cyan-300">Pranav Chopade</span>
+        </h1>
+
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-md">
+          A <span className="text-white font-medium">React Developer</span> and <span className="text-white font-medium">UI Enthusiast</span>, passionate about building intuitive, responsive, and user-friendly web applications.
+        </p>
+
+        <div className="flex space-x-4 pt-4">
+          <a
+            href="#projects"
+            className="px-5 py-2.5 bg-cyan-600 hover:bg-cyan-700 rounded-md font-semibold transition shadow-md"
+          >
+            View Projects
+          </a>
+          <a
+            href="./Pranav_Chopade.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 border border-gray-400 hover:border-cyan-600 text-gray-200 hover:text-cyan-400 rounded-md font-semibold transition"
+          >
+            Download Resume
+          </a>
+        </div>
       </div>
 
-      <div className="absolute w-[180px] h-[180px] bg-blue-500 rounded-full opacity-20 blur-3xl top-10 left-10 pointer-events-none"></div>
-      <div className="absolute w-[180px] h-[180px] bg-purple-600 rounded-full opacity-20 blur-3xl bottom-10 right-10 pointer-events-none"></div>
+      <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+        <div className="w-64 h-64 bg-[#1e293b] rounded-full flex items-center justify-center shadow-lg border border-cyan-800 overflow-hidden">
+          <img
+            src={profile3}
+            alt="userProfile"
+            className="object-cover w-full h-full rounded-full border-2 border-[#00d8ff] shadow-[0_0_25px_#00d8ff80]"
+          />
+        </div>
+      </div>
 
-    </section>
+      <Separator />
+    </section >
   );
 };
 
