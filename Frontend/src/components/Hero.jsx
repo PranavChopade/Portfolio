@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex flex-col md:flex-row items-center justify-between bg-[#0d1825] px-6 md:px-24 py-20 text-white"
+      className=" relative w-full min-h-screen flex flex-col md:flex-row items-center justify-between bg-[#0d1825] px-6 md:px-24 py-20 text-white"
     >
       <div className="absolute w-80 h-80 bg-cyan-500/20 blur-3xl rounded-full top-0 left-[1%] animate-pulse pointer-events-none"></div>
       <div className="absolute w-80 h-80 bg-purple-600/20 blur-3xl rounded-full bottom-[-10%] right-[2%] animate-pulse pointer-events-none"></div>
@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <Separator />
+      <Separator currentSectionId="home" />
     </section >
   );
 };

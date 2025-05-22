@@ -98,7 +98,7 @@ const Contact = () => {
             {loading ? 'Sending...' : '🚀 Send Message'}
           </button>
         </form>
-        <Separator />
+        <Separator currentSectionId="contact" />
       </section>
     </>
   );
