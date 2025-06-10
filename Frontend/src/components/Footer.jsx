@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   const [btnClick, setBtnClick] = useState(false)
   const [newsLetterEmail, setNewsLetterEmail] = useState('')
-
   const handleBtnClick = (e) => {
     e.preventDefault()
     setBtnClick(true)
@@ -19,6 +18,7 @@ const Footer = () => {
   };
   return (
     <section id="about" className=' bg-[#0d1825]  py-10 px-5 md:px-10 lg:px-20 text-white '>
+
       <div className='grid gap-10 md:grid-cols-2 lg:grid-cols-4'>
 
         <div>
@@ -72,12 +72,12 @@ const Footer = () => {
 
         <div>
           <h2 className="text-2xl text-blue-400 mb-4">Subscribe</h2>
-          <form className=' space-y-3 '>
+          <form className='space-y-3'>
             <input
               type="email"
               value={newsLetterEmail}
               onChange={(e) => setNewsLetterEmail(e.target.value)}
-              className="border border-gray-600 p-2 rounded focus:ring-1 focus:ring-blue-500 focus:outline-none focus:border-blue-500"
+              className="border border-gray-600 p-2 rounded focus:ring-1 focus:ring-blue-500 focus:outline-none focus:border-blue-500 w-[55%] mr-3 md:w-full "
               placeholder='enter your email'
               required />
             <button
@@ -85,7 +85,7 @@ const Footer = () => {
               onClick={newsLetterEmail.trim().length >= 10 && handleBtnClick}
               className={`
           ${btnClick ? "border border-pink-500/50 text-pink-400" : "bg-red-500 hover:bg-red-600"} 
-           px-7 py-2 rounded font-semibold cursor-pointer transition shadow-sm hover:shadow-pink-500/50 ml-2
+           px-7 py-2 rounded font-semibold cursor-pointer transition shadow-sm hover:shadow-pink-500/50 
           `}>
               {btnClick ? "Subscribed 🎉" : "Subscribe"}
             </button>
