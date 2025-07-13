@@ -24,12 +24,13 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('/api/users', userMessage);
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/users`, userMessage);
+
       console.log(response.data);
       toast.success('🎉 Message sent successfully!');
     } catch (error) {
       console.error('Error sending message:', error.response?.data || error.message);
-      toast.error('❌ Failed to send message. Please try again.');
+      toast.error('Failed to send message. Please try again.');
     } finally {
       setLoading(false);
       setName('');
