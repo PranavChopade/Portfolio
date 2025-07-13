@@ -10,10 +10,7 @@ dotenv.config()
 const PORT = process.env.PORT || 5000;
 
 connectDB()
-app.use(cors({
-  origin: 'https://pranavchopade-portfolio.netlify.app',
-  methods: ['POST']
-}));
+app.use(cors());
 
 app.use(express.json())
 
