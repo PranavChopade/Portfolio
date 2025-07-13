@@ -8,7 +8,7 @@ export default defineConfig({
 
   server: {
     proxy: {
-      "/api": "https://portfolio-ecje.onrender.com"
+      "/api": "https://portfolio1-4b2m.onrender.com"
     }
   },
 
