@@ -1,13 +1,22 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import cors from 'cors'
 import router from './Routes/route.js';
 import connectDB from './Config/db.js';
 
 const app = express();
 dotenv.config()
+
 const PORT = process.env.PORT || 5000;
+
 connectDB()
+app.use(cors({
+  origin: 'https://pranavchopade-portfolio.netlify.app',
+  methods: ['POST']
+}));
+
 app.use(express.json())
+
 
 app.use("/api", router)
 
