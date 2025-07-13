@@ -24,7 +24,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/users`, userMessage);
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/contact`, userMessage);
 
       console.log(response.data);
       toast.success('🎉 Message sent successfully!');
