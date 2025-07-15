@@ -8,6 +8,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const baseUrl = import.meta.env.VITE_API_BASE_URL
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     if (!name || !email || !message) {
@@ -24,7 +25,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/contact`, userMessage);
+      const response = await axios.post(`${baseUrl}/api/contact`, userMessage);
 
       console.log(response.data);
       toast.success('🎉 Message sent successfully!');
