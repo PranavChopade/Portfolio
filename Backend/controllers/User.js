@@ -1,25 +1,24 @@
-import User from '../Model/UserModel.js'
-
 export const getUserMessage = async (req, res) => {
-  const { name, email, message } = req.body;
+
   try {
-    const newUser = new User({ name, email, message })
-    const savedUser = await newUser.save()
-    if (!savedUser) {
-      return res.status(404).json({
-        success: false,
-        message: "failed to post message"
-      })
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+      return res.status(400).json(
+        {
+          success: false, message: "All fields are required"
+        }
+      );
     }
+
     res.status(200).json({
       success: true,
-      message: "message sent successfully",
-      data: savedUser
-    })
+      message: "Data received ✅",
+      data: { name, email, message }
+    });
+
   } catch (error) {
-    return res.status(500).json({
-      success: false,
-      message: "internal server error"
-    })
+    console.error("❌ Unexpected Error:", error);
+    res.status(500).json({ success: false, message: "Internal server error" });
   }
-}
+};
