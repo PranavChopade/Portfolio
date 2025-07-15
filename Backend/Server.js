@@ -15,11 +15,10 @@ app.use(cors({
     'https://pranavchopade-portfolio.netlify.app',
     'http://localhost:5173'
   ],
-  methods: ['POST']
+  methods: ['POST', 'OPTIONS']
 }));
 
 app.use(express.json())
-
 
 app.use("/api", router)
 
