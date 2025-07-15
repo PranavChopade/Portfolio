@@ -1,5 +1,5 @@
 import Separator from "./Separator";
-import ProjectCard from './Projectcard';
+import ProjectCard from './ProjectCard';
 const Projects = () => {
   return (
     <section
