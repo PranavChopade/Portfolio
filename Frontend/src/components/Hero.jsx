@@ -21,7 +21,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-md">
-          A <span className="text-white font-medium">React Developer</span> and <span className="text-white font-medium">UI Enthusiast</span>, passionate about building intuitive, responsive, and user-friendly web applications.
+          A <span className="text-white font-medium">MERN Stack  Developer</span> and <span className="text-white font-medium">UI Enthusiast</span>, passionate about building intuitive, responsive, and user-friendly web applications.
         </p>
 
         <div className="flex space-x-4 pt-4">
@@ -32,7 +32,7 @@ const Hero = () => {
             View Projects
           </a>
           <a
-            href="./Pranav_Chopade.pdf"
+            href="./Pranav-Chopade.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 border border-gray-400 hover:border-cyan-600 text-gray-200 hover:text-cyan-400 rounded-md font-semibold transition"

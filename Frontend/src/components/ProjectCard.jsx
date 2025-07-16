@@ -55,7 +55,7 @@ const ProjectCard = () => {
                     rel="noopener noreferrer"
                     className="inline-block text-sm text-cyan-300 hover:text-white font-base bg-cyan-500/10 hover:bg-cyan-400/20 px-4 py-2 rounded-lg transition duration-300"
                   >
-                    View
+                    Demo
                   </a>}
               </div>
             </div>
