@@ -9,14 +9,13 @@ import UserAuthentication from '../assets/User-Authentication.jpg';
 
 const ProjectCard = () => {
   const Projects = [
-    { img: notes, name: "Redux Notes", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Redux-Notes-App", stacks: ["Frontend"] },
-    { img: Todo, name: "Todo", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Todo", stacks: ["Frontend", "Backend"] },
-    { img: expense, name: "Expense Tracker", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Expense-Tracker", stacks: ["Frontend", "Backend"] },
-    { img: UserAuthentication, name: "User Authentication", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/UserAuthentication", stacks: ["Frontend", "Backend"] },
-    { img: responsive, name: "Responsive Web", githubLink: "https://github.com/PranavChopade/Tailwind-Responsiveness", stacks: ["Frontend"] },
-    { img: blog, name: "Blog", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/blog", stacks: ["Frontend"] },
-    { img: eventManagement, name: "Event Management", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/event-management-app", stacks: ["Frontend"] },
-
+    { img: expense, name: "Expense Tracker", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Expense-Tracker", liveLink: 'https://react-projects-frontend-e0a9.onrender.com/' },
+    { img: notes, name: "Redux Notes", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Redux-Notes-App" },
+    { img: Todo, name: "Todo", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Todo" },
+    { img: UserAuthentication, name: "User Authentication", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/UserAuthentication" },
+    { img: responsive, name: "Responsive Web", githubLink: "https://github.com/PranavChopade/Tailwind-Responsiveness", liveLink: '' },
+    { img: blog, name: "Blog", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/blog" },
+    { img: eventManagement, name: "Event Management", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/event-management-app" },
   ];
 
   return (
@@ -34,30 +33,31 @@ const ProjectCard = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-20 transition duration-300"></div>
           </div>
-          <div className='flex justify-between items-center gap-3 group h-full  '>
+          <div className='flex justify-between items-center gap-3 group h-full'>
 
             <div className="p-3">
               <h2 className="text-md font-semibold text-white capitalize mb-2 tracking-wide group-hover:text-cyan-400 transition duration-300">
                 {data.name}
               </h2>
-              <a
-                href={data.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-sm text-cyan-300 hover:text-white font-base bg-cyan-500/10 hover:bg-cyan-400/20 px-4 py-2 rounded-lg transition duration-300"
-              >
-                View Project →
-              </a>
-            </div>
-            <div className='hidden group-hover:block'>
-
-              {data.stacks && (
-                <div className="hidden group-hover:flex flex-col text-[12px] text-cyan-300 bg-cyan-500/10 hover:bg-cyan-400/20 px-2 py-2 rounded-md space-y-1 transition duration-300">
-                  {data.stacks.map((stack, i) => (
-                    <span key={i}>{stack}</span>
-                  ))}
-                </div>
-              )}
+              <div className='flex gap-3'>
+                <a
+                  href={data.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm text-cyan-300 hover:text-white font-base bg-cyan-500/10 hover:bg-cyan-400/20 px-4 py-2 rounded-lg transition duration-300"
+                >
+                  Code
+                </a>
+                {data.liveLink &&
+                  <a
+                    href={data.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-sm text-cyan-300 hover:text-white font-base bg-cyan-500/10 hover:bg-cyan-400/20 px-4 py-2 rounded-lg transition duration-300"
+                  >
+                    View
+                  </a>}
+              </div>
             </div>
           </div>
         </div>
