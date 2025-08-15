@@ -14,7 +14,7 @@ const ProjectCard = () => {
     { img: voteImg, name: "Voting-app", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Voting-app", liveLink: 'https://voting-app-frontend-v58p.onrender.com/' },
     { img: notes, name: "Redux Notes", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Redux-Notes-App" },
     { img: Todo, name: "Todo", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Todo" },
-    { img: UserAuthentication, name: "User Authentication", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/UserAuthentication" },
+    { img: UserAuthentication, name: "User Authentication", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/User-Authentication" },
     { img: responsive, name: "Responsive Web", githubLink: "https://github.com/PranavChopade/Tailwind-Responsiveness", liveLink: '' },
     { img: blog, name: "Blog", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/blog" },
     { img: eventManagement, name: "Event Management", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/event-management-app" },
