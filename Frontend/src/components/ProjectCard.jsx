@@ -1,5 +1,6 @@
 import React from 'react';
 import blog from '../assets/blog.jpg';
+import voteImg from '../assets/vote-img.png';
 import eventManagement from '../assets/eventmanagement.png';
 import responsive from '../assets/responsive.jpg';
 import Todo from '../assets/Todo.jpg';
@@ -10,6 +11,7 @@ import UserAuthentication from '../assets/User-Authentication.jpg';
 const ProjectCard = () => {
   const Projects = [
     { img: expense, name: "Expense Tracker", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Expense-Tracker", liveLink: 'https://react-projects-frontend-e0a9.onrender.com/' },
+    { img: voteImg, name: "Voting-app", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Voting-app", liveLink: 'https://voting-app-frontend-v58p.onrender.com/' },
     { img: notes, name: "Redux Notes", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Redux-Notes-App" },
     { img: Todo, name: "Todo", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Todo" },
     { img: UserAuthentication, name: "User Authentication", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/UserAuthentication" },
