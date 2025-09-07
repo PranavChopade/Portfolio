@@ -7,9 +7,11 @@ import Todo from '../assets/Todo.jpg';
 import notes from '../assets/notes.jpg';
 import expense from '../assets/expense.png';
 import UserAuthentication from '../assets/User-Authentication.jpg';
+import Productivity from '../assets/Productivity.jpg';
 
 const ProjectCard = () => {
   const Projects = [
+    { img: Productivity, name: "focuson", githubLink: "https://github.com/PranavChopade/focuson", liveLink: 'https://focuson-frontend.onrender.com' },
     { img: expense, name: "Expense Tracker", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Expense-Tracker", liveLink: 'https://react-projects-frontend-e0a9.onrender.com/' },
     { img: voteImg, name: "Voting-app", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Voting-app", liveLink: 'https://voting-app-frontend-v58p.onrender.com/' },
     { img: notes, name: "Redux Notes", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Redux-Notes-App" },
