@@ -1,5 +1,6 @@
 import Separator from "./Separator";
 import profile3 from "../../public/profile3.png"
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   return (
@@ -21,7 +22,20 @@ const Hero = () => {
         </h1>
 
         <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-md">
-          A <span className="text-white font-medium">MERN Stack  Developer</span> and <span className="text-white font-medium">UI Enthusiast</span>, passionate about building intuitive, responsive, and user-friendly web applications.
+          A{' '}
+          <TypeAnimation
+            sequence={[
+              'MERN Stack Developer',
+              2000,
+              'UI Enthusiast',
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            className="text-white font-medium"
+            repeat={Infinity}
+          />
+          , passionate about building intuitive, responsive, and user-friendly web applications.
         </p>
 
         <div className="flex space-x-4 pt-4">
@@ -43,12 +57,15 @@ const Hero = () => {
       </div>
 
       <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-        <div className="w-64 h-64 bg-[#1e293b] rounded-full flex items-center justify-center shadow-lg border border-cyan-800 overflow-hidden">
-          <img
-            src={profile3}
-            alt="userProfile"
-            className="object-cover w-full h-full rounded-full border-2 border-[#00d8ff] shadow-[0_0_25px_#00d8ff80]"
-          />
+        <div className="relative w-64 h-64">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 rounded-full animate-spin opacity-75 blur-sm"></div>
+          <div className="relative w-full h-full bg-[#1e293b] rounded-full flex items-center justify-center shadow-lg border border-cyan-800 overflow-hidden">
+            <img
+              src={profile3}
+              alt="userProfile"
+              className="object-cover w-full h-full rounded-full border-2 border-[#00d8ff] shadow-[0_0_25px_#00d8ff80]"
+            />
+          </div>
         </div>
       </div>
 

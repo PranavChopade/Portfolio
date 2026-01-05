@@ -51,13 +51,13 @@ const Contact = () => {
 
         <div className="absolute w-80 h-80 bg-purple-600/20 blur-3xl rounded-full bottom-[-10%] right-[2%] animate-pulse pointer-events-none"></div>
 
-        <h1 className="text-4xl md:text-5xl font-extrabold text-cyan-400 mb-7 text-center tracking-wider">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-cyan-400 mb-7 text-center tracking-wider animate-fade-in-down">
           Message Me
         </h1>
 
         <form
           onSubmit={handleFormSubmit}
-          className="flex flex-col gap-6 w-full max-w-[500px] bg-[#0f1b28] p-8 rounded-2xl border border-cyan-500 shadow-lg shadow-cyan-500/30 mb-2"
+          className="flex flex-col gap-6 w-full max-w-[500px] bg-[#0f1b28] p-8 rounded-2xl border border-cyan-500 shadow-lg shadow-cyan-500/30 mb-2 animate-fade-in-up"
         >
           <input
             type="text"

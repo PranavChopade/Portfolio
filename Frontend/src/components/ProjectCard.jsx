@@ -27,7 +27,8 @@ const ProjectCard = () => {
       {Projects.map((data, index) => (
         <div
           key={index}
-          className="relative group bg-gradient-to-br from-[#101e2e] to-[#0d1825] w-[250px] rounded-2xl overflow-hidden border border-cyan-700/20 hover:border-cyan-400/70 shadow-lg shadow-cyan-800/10 hover:shadow-cyan-500/30 transform transition-all duration-300 hover:scale-[1.03]"
+          className="relative group bg-gradient-to-br from-[#101e2e] to-[#0d1825] w-[250px] rounded-2xl overflow-hidden border border-cyan-700/20 hover:border-cyan-400/70 shadow-lg shadow-cyan-800/10 hover:shadow-cyan-500/30 transform transition-all duration-300 hover:scale-[1.03] hover:rotate-1 animate-fade-in-up"
+          style={{ animationDelay: `${index * 0.1}s` }}
         >
           <div className="relative">
             <img
