@@ -9,7 +9,7 @@ import expense from '../assets/expense.png';
 import UserAuthentication from '../assets/User-Authentication.jpg';
 import Productivity from '../assets/Productivity.jpg';
 import postly from "../assets/postly.png"
-import examNotesai from "../assets/examNotesai.png"
+import examNotesai from "../assets/examNotesai.PNG"
 const ProjectCard = () => {
   const Projects = [
     { img: examNotesai, name: "ExamNotes.ai", githubLink: "https://github.com/PranavChopade/ExamNotes.ai", liveLink: 'https://examnoteai.netlify.app' },
