@@ -9,9 +9,10 @@ import expense from '../assets/expense.png';
 import UserAuthentication from '../assets/User-Authentication.jpg';
 import Productivity from '../assets/Productivity.jpg';
 import postly from "../assets/postly.png"
-
+import examNotesai from "../assets/examNotesai.png"
 const ProjectCard = () => {
   const Projects = [
+    { img: examNotesai, name: "ExamNotes.ai", githubLink: "https://github.com/PranavChopade/ExamNotes.ai", liveLink: 'https://examnoteai.netlify.app' },
     { img: Productivity, name: "focuson", githubLink: "https://github.com/PranavChopade/focuson", liveLink: 'https://focuson-frontend.onrender.com' },
     { img: expense, name: "Expense Tracker", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Expense-Tracker", liveLink: 'https://react-projects-frontend-e0a9.onrender.com/' },
     { img: postly, name: "Postly", githubLink: "https://github.com/PranavChopade/postly/tree/main" },
