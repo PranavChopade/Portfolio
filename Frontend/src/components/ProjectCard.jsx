@@ -10,9 +10,12 @@ import UserAuthentication from '../assets/User-Authentication.jpg';
 import Productivity from '../assets/Productivity.jpg';
 import postly from "../assets/postly.png"
 import examNotesai from "../assets/examNotesai.PNG"
+import jobTracker from "../assets/jobTracker.PNG";
+
 const ProjectCard = () => {
   const Projects = [
     { img: examNotesai, name: "ExamNotes.ai", githubLink: "https://github.com/PranavChopade/ExamNotes.ai", liveLink: 'https://examnoteai.netlify.app' },
+    { img: jobTracker, name: "Job Application Tracker", githubLink: "https://github.com/PranavChopade/job-application-tracker", liveLink: 'https://jobs-applications-tracker.netlify.app' },
     { img: Productivity, name: "focuson", githubLink: "https://github.com/PranavChopade/focuson", liveLink: 'https://focuson-frontend.onrender.com' },
     { img: expense, name: "Expense Tracker", githubLink: "https://github.com/PranavChopade/React-Projects/tree/main/Projects/Expense-Tracker", liveLink: 'https://react-projects-frontend-e0a9.onrender.com/' },
     { img: postly, name: "Postly", githubLink: "https://github.com/PranavChopade/postly/tree/main" },
