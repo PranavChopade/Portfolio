@@ -47,7 +47,7 @@ const Footer = () => {
 
 
         <div>
-          <h1 className='text-2xl text-blue-400 mb-4  '>Follow Us</h1>
+          <h1 className='text-2xl text-blue-400 mb-4  '>Follow Me</h1>
           <div className='flex  gap-6'>
             <Link to={"https://www.linkedin.com/in/pranav-chopade-140b6a245/"} target='_blank'>
               <AiOutlineLinkedin size={36} className='hover:text-blue-400 cursor-pointer hover:scale-110 transition transform' />
